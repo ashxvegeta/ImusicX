@@ -2,17 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <!-- For images -->
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-
-    <!-- For videos -->
-    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
-
-    <!-- For audio/music -->
-    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
-
-    <!-- Optional: for older versions -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" /> <!-- For videos -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" /> <!-- For audio/music -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" /> <!-- Optional: for older versions -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
 
     <application
         android:allowBackup="true"
@@ -24,6 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ImusicX"
         tools:targetApi="31">
+        <activity
+            android:name=".PlaySong"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
